@@ -1,3 +1,6 @@
+import calculos
+import módulobusqueda
+
 gastos = []
 # --- Funcion de Sofia Rodriguez ---
 def registrar_gasto():
@@ -27,12 +30,10 @@ def main():
             
             
         elif opcion == "2":
-            print("Modulo de total (en desarrollo)")
-            # Aqui va la funcion del estudiante 3
-            
+            calculos.mostrar_total(gastos) 
+
         elif opcion == "3":
-            print("Modulo de busqueda (en desarrollo)")
-            # Aqui va la funcion del estudiante 4
+            módulobusqueda.buscar_por_placa(gastos) 
             
         elif opcion == "4":
             print("Saliendo...")

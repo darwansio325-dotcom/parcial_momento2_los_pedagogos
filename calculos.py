@@ -1,14 +1,7 @@
-def mostrar_gasto_total(gastos):
-    total_acumulado = 0
-    
+def mostrar_total(gastos):
+    print("\n--- TOTAL DE GASTOS ---")
     if not gastos:
-        print("\n[!] No hay datos registrados para realizar el cálculo.")
-        return
-
-    # recorre la lista de diccionarios
-    for registro in gastos:
-        total_acumulado += registro["Valor"]
-    
-    print("\n========================================")
-    print(f" GASTO TOTAL ACUMULADO: ${total_acumulado}")
-    print("========================================\n")
+        print("No hay gastos registrados.")
+    else:
+        total = sum(g["valor"] for g in gastos)
+        print(f"El gasto total acumulado es: ${total}")
