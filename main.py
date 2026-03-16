@@ -1,4 +1,15 @@
 gastos = []
+# --- Funcion de Sofia Rodriguez ---
+def registrar_gasto():
+    print("\n--- REGISTRAR NUEVO GASTO ---")
+    placa = input("Ingrese la placa: ")
+    concepto = input("Concepto (Gasolina/Peaje): ")
+    valor = float(input("Ingrese el valor: "))
+    
+    
+    gasto = {"placa": placa, "concepto": concepto, "valor": valor}
+    gastos.append(gasto)
+    print("Gasto registrado con exito.")
 def menu():
     print("\n--- MENU DE OPCIONES ---")
     print("1. Registrar gasto")
@@ -12,8 +23,8 @@ def main():
         opcion = input("Elija una opcion: ")
 
         if opcion == "1":
-            print("Modulo de registro (en desarrollo)")
-            # Aqui va la funcion del estudiante 2
+            registrar_gasto()
+            
             
         elif opcion == "2":
             print("Modulo de total (en desarrollo)")
